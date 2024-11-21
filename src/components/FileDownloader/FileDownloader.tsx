@@ -106,14 +106,18 @@ export const FileDownloader = ({
             onChange={selectAllHandler}
           />
           <span>
-            {selectedFilesCount} / {files.length} Selected
+            {selectedFilesCount === 0
+              ? "None Selected"
+              : `Selected ${selectedFilesCount}`}
           </span>
         </div>
         <button
           className={clsx(
             "flex flex-row items-center hover:bg-gray-200 p-2 m-2 rounded-md gap-1",
             {
-              "cursor-not-allowed bg-gray-200": selectedFilesCount === 0,
+              "cursor-not-allowed bg-gray-200 text-gray-500":
+                selectedFilesCount === 0,
+              "border border-gray-600": selectedFilesCount > 0,
             }
           )}
           aria-label="Download selected files"
@@ -125,7 +129,7 @@ export const FileDownloader = ({
           aria-disabled={selectedFilesCount === 0}
           disabled={selectedFilesCount === 0}
           onClick={() =>
-            onDownload(files.filter((file, index) => selectedFiles[index]))
+            onDownload(files.filter((_, index) => selectedFiles[index]))
           }
         >
           Download Selected

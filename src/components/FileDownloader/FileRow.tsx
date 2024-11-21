@@ -15,7 +15,6 @@ export const FileRow = ({
   isSelected = false,
   onSelect,
 }: FileRowProps) => {
-  console.log("isSelected", isSelected);
 
   return (
     <tr

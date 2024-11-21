@@ -5,6 +5,7 @@
 To set up the project locally, follow these steps:
 
 1. **Clone the repository:**
+
    ```sh
    git clone https://github.com/gmadar/FileDownloader.git
    cd your-repo-name
@@ -12,36 +13,44 @@ To set up the project locally, follow these steps:
 
 2. **Use node 18.x:**
    If you have NVM installed, run:
+
    ```sh
-   nvm use
+   nvm install
    ```
+
+   to install the correct version of node.
 
 3. **Install dependencies:**
    Install project dependencies by running:
+
    ```sh
    npm install
    ```
 
 4. **Run the development server:**
    Start the development server to see your changes live:
+
    ```sh
    npm run dev
    ```
 
 5. **Build the project:**
    To create a production build, run:
+
    ```sh
    npm run build
    ```
 
 6. **Run Storybook:**
    To start Storybook and view the components in different scenarios
+
    ```sh
    npm run storybook
    ```
 
 7. **Run tests:**
    To run the tests, use:
+
    ```sh
    npm run test
    ```

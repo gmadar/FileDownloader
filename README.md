@@ -1,5 +1,7 @@
 ## Setup Instructions
 
+![screenshot](https://github.com/gmadar/FileDownloader/blob/assets/demo.gif?raw=true)
+
 To set up the project locally, follow these steps:
 
 1. **Clone the repository:**

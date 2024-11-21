@@ -47,7 +47,9 @@ function App() {
   return (
     <div className="flex flex-col items-center justify-center h-screen">
       <h1 className="text-2xl font-bold">File Downloader Component:</h1>
+      <div className="w-[600px]">
       <FileDownloader files={files} onDownload={downloadHandler} />
+      </div>
     </div>
   );
 }

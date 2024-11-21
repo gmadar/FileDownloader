@@ -1,3 +1,49 @@
+## Setup Instructions
+
+To set up the project locally, follow these steps:
+
+1. **Clone the repository:**
+   ```sh
+   git clone https://github.com/gmadar/FileDownloader.git
+   cd your-repo-name
+   ```
+
+2. **Install dependencies:**
+   Make sure you have Node.js and npm installed. Then run:
+   ```sh
+   npm install
+   ```
+
+3. **Run the development server:**
+   Start the development server to see your changes live:
+   ```sh
+   npm run dev
+   ```
+
+4. **Build the project:**
+   To create a production build, run:
+   ```sh
+   npm run build
+   ```
+
+5. **Run Storybook:**
+   To start Storybook and view the components in different scenarios
+   ```sh
+   npm run storybook
+   ```
+
+6. **Run tests:**
+   To run the tests, use:
+   ```sh
+   npm run test
+   ```
+
+8. **Preview the production build:**
+   To preview the production build locally, run:
+   ```sh
+   npm run preview
+   ```
+
 # File downloader component
 
 ## Description

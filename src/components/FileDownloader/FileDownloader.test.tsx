@@ -49,7 +49,7 @@ describe("FileDownloader", () => {
   it("displays correct selection count when none are selected", () => {
     render(<FileDownloader files={sampleFiles} onDownload={mockOnDownload} />);
 
-    const selectionCountElement = screen.getByText("0 / 3 Selected");
+    const selectionCountElement = screen.getByText("None Selected");
     expect(selectionCountElement).toBeTruthy();
     const downloadButton = screen.getByRole("button", {
       name: /download selected/i,
@@ -70,7 +70,7 @@ describe("FileDownloader", () => {
     }) as HTMLButtonElement;
     expect(downloadButton.disabled).toBeFalsy();
 
-    const selectionCountElement = screen.getByText("1 / 3 Selected");
+    const selectionCountElement = screen.getByText("Selected 1");
     expect(selectionCountElement).toBeTruthy();
 
     // status of first checkbox should be indeterminate
@@ -84,7 +84,7 @@ describe("FileDownloader", () => {
     fireEvent.click(selectAllCheckbox);
 
     // Should select only available files (2 files in our sample)
-    expect(screen.getByText("2 / 3 Selected")).toBeTruthy();
+    expect(screen.getByText("Selected 2")).toBeTruthy();
   });
 
   it("triggers onDownload with correct files when download button is clicked", () => {
@@ -117,10 +117,10 @@ describe("FileDownloader", () => {
 
     // First click should select all available files
     fireEvent.click(selectAllCheckbox);
-    expect(screen.getByText("2 / 3 Selected")).toBeTruthy();
+    expect(screen.getByText("Selected 2")).toBeTruthy();
 
     // Second click should deselect all files
     fireEvent.click(selectAllCheckbox);
-    expect(screen.getByText("0 / 3 Selected")).toBeTruthy();
+    expect(screen.getByText("None Selected")).toBeTruthy();
   });
 });

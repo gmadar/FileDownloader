@@ -10,31 +10,37 @@ To set up the project locally, follow these steps:
    cd your-repo-name
    ```
 
-2. **Install dependencies:**
-   Make sure you have Node.js and npm installed. Then run:
+2. **Use node 18.x:**
+   If you have NVM installed, run:
+   ```sh
+   nvm use
+   ```
+
+3. **Install dependencies:**
+   Install project dependencies by running:
    ```sh
    npm install
    ```
 
-3. **Run the development server:**
+4. **Run the development server:**
    Start the development server to see your changes live:
    ```sh
    npm run dev
    ```
 
-4. **Build the project:**
+5. **Build the project:**
    To create a production build, run:
    ```sh
    npm run build
    ```
 
-5. **Run Storybook:**
+6. **Run Storybook:**
    To start Storybook and view the components in different scenarios
    ```sh
    npm run storybook
    ```
 
-6. **Run tests:**
+7. **Run tests:**
    To run the tests, use:
    ```sh
    npm run test
